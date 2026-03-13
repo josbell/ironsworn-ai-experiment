@@ -2,9 +2,10 @@
  * Stage 2 test harness — random event generator.
  * Run with: npx tsx scripts/test-event.ts
  *
- * Requires ANTHROPIC_API_KEY in environment (or a .env file loaded externally).
+ * Requires ANTHROPIC_API_KEY in environment or a .env file in the project root.
  */
 
+import "./load-env.js";
 import { generateRandomEvent } from "../src/lib/ai/client.js";
 import type { Vow } from "../src/lib/ironsworn/types.js";
 

@@ -2,9 +2,10 @@
  * Stage 2 test harness — NPC generator.
  * Run with: npx tsx scripts/test-npc.ts
  *
- * Requires ANTHROPIC_API_KEY in environment (or a .env file loaded externally).
+ * Requires ANTHROPIC_API_KEY in environment or a .env file in the project root.
  */
 
+import "./load-env.js";
 import { generateNPC } from "../src/lib/ai/client.js";
 
 const testContext =

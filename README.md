@@ -57,18 +57,20 @@ npm install
 
 ### Run a test script
 
-```bash
-ANTHROPIC_API_KEY=sk-... npm run test:oracle
-ANTHROPIC_API_KEY=sk-... npm run test:npc
-ANTHROPIC_API_KEY=sk-... npm run test:event
-```
-
-Or copy `.env.example` to `.env` and add your key:
+Copy `.env.example` to `.env` and add your key:
 
 ```bash
 cp .env.example .env
-# edit .env, then:
-npx tsx scripts/test-oracle.ts
+# add your key to .env, then:
+npm run test:oracle
+npm run test:npc
+npm run test:event
+```
+
+You can also pass the key inline — it takes precedence over `.env`:
+
+```bash
+ANTHROPIC_API_KEY=sk-... npm run test:oracle
 ```
 
 ### Type check
