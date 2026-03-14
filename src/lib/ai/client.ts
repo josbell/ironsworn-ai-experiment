@@ -13,7 +13,9 @@ import {
 import { NPCSchema, RandomEventSchema, parseStructuredOutput } from "./schemas.js";
 import type { NPC, RandomEvent } from "./schemas.js";
 
-const MODEL = "claude-haiku-4-5-20251001";
+// claude-haiku-4-5-20251001 requires Anthropic API Tier 2 (~$40 spend).
+// Use claude-3-5-haiku-20241022 on a fresh account; swap back once tier 2 is unlocked.
+const MODEL = "claude-3-5-haiku-20241022";
 
 function makeClient(apiKey?: string): Anthropic {
   return new Anthropic({ apiKey: apiKey ?? process.env["ANTHROPIC_API_KEY"] });
